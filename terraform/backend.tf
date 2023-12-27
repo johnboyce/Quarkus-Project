@@ -1,8 +1,9 @@
 terraform {
   backend "s3" {
     bucket               = "tf-state-quarkus"
-    key                  = "terraform.quarkus.tfstate"
+    key                  = "development/terraform.quarkus.tfstate"
     workspace_key_prefix = "demo"
     region               = "us-east-1"
+    encrypt              = true
   }
 }
