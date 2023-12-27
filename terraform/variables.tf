@@ -40,6 +40,12 @@ variable "ecr_name" {
   default     = "quarkus-project"
 }
 
+variable "image_tag" {
+  type        = string
+  default     = "latest"
+  description = "Docker image tag"
+}
+
 variable "ecs_alb_name" {
   type        = string
   description = "ALB for Quarkus Project"
