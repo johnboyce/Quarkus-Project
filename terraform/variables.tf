@@ -27,3 +27,38 @@ variable "azs" {
   description = "Availability Zones"
   default     = ["us-east-1a", "us-east-1b", "us-east-1c"]
 }
+
+variable "cluster_name" {
+  type        = string
+  description = "ECS Cluster name"
+  default     = "Quarkus-Project-Cluster"
+}
+
+variable "ecr_name" {
+  type        = string
+  description = "ECR Repository name"
+  default     = "quarkus-project"
+}
+
+variable "ecs_alb_name" {
+  type        = string
+  description = "ALB for Quarkus Project"
+  default     = "quarkus-ecs-alb"
+}
+
+variable "aws_sg_name" {
+  type        = string
+  description = "security group name"
+  default     = "quarkus_ecs_sg"
+}
+
+variable "app_port" {
+  type        = number
+  description = "Port number of the application container"
+  default     = 80
+}
+
+variable "health_check_path" {
+  type    = string
+  default = "/"
+}

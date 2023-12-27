@@ -38,7 +38,7 @@ jobs:
         uses: gradle/gradle-build-action@v2
 
       - name: Run build with Gradle Wrapper
-        run: ./gradlew build
+        run: ./gradlew build -Dquarkus.package.type=legacy-jar
 
 #      - name: Set up JDK 21
 #        uses: actions/setup-java@v3
